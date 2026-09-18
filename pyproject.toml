@@ -1,0 +1,33 @@
+[tool.pytest.ini_options]
+addopts = "--alluredir=allure-results"
+markers = [
+    "regression: all tests in the regression suite",
+    "authorization: tests to verify authorization",
+    "registration: tests to verify registration"
+]
+
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | __pycache__
+  | .pytest_cache
+  | allure-results
+  | allure-report
+  | README.md
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip = [
+    "git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+    "allure-results",
+    "allure-report"
+]
