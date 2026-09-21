@@ -1,3 +1,5 @@
+import time
+
 import allure
 
 from pages.login_page import LoginPage
@@ -11,8 +13,11 @@ from pages.login_page import LoginPage
 def test_invalid_login_password(login_page: LoginPage):
     login_page.open()
     login_page.enter_email("customer@practicesoftwaretesting.com")
+    time.sleep(1)
     login_page.enter_password("Test")
+    time.sleep(1)
     login_page.click_login_button()
+    time.sleep(1)
 
     assert login_page.check_login_error_text("Invalid email or password")
 
