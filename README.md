@@ -65,7 +65,7 @@ pytest -sv tests
 #### Удаленный запуск авто-тестов.
 
 ```bash
-pytest tests -s --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browser=$BROWSER --browser-version=$BROWSER_VERSION --headless=$HEADLESS --screen-resolution=$SCREEN_RESOLUTION
+pytest tests -s --base-url=$BASE_URL --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browser=$BROWSER --browser-version=$BROWSER_VERSION --headless=$HEADLESS --screen-resolution=$SCREEN_RESOLUTION
 ```
 
 > `--base-url` — Адрес стенда для UI тестов.
@@ -88,7 +88,7 @@ pytest tests -s --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browse
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-pytest tests -s --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browser=$BROWSER --browser-version=$BROWSER_VERSION --headless=$HEADLESS --screen-resolution=$SCREEN_RESOLUTION
+pytest tests -s --base-url=$BASE_URL --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browser=$BROWSER --browser-version=$BROWSER_VERSION --headless=$HEADLESS --screen-resolution=$SCREEN_RESOLUTION
 ```
 
 </details>
@@ -98,31 +98,31 @@ pytest tests -s --selenoid-url=$SELENOID_URL --environment=$ENVIRONMENT --browse
 ### Запуск тестов в <a href=""> Jenkins: </a>
 
 <div style="text-align: left;">
-    <img src="" alt="Run a freestyle pipeline in Jenkins.">
+    <img src="resources/images/jenkins_run_tests.png" alt="Run a freestyle pipeline in Jenkins.">
 </div>
 
-### Отчеты в <a href=""> Allure Report: </a>
+### Отчеты в <a href="https://jenkins.qa.guru/job/aslan_rb_python_27_thread_toolshop_diploma_project/6/allure/"> Allure Report: </a>
 
 #### Главная страница отчета:
 
 <div style="text-align: left;">
-    <img src="" alt="Allure report.">
+    <img src="resources/images/allure_general.png" alt="Allure report.">
 </div>
 
 #### Страница набора тестов.
 
 <div style="text-align: left;">
-    <img src="" alt="Allure report.">
+    <img src="resources/images/allure_suites.png" alt="Allure report.">
 </div>
 
 #### Пример отправляемого отчета в telegram:
 
 <div style="text-align: left;">
-    <img src="" alt="Telegram notifications.">
+    <img src="resources/images/telegram_notification.png" alt="Telegram notifications.">
 </div>
 
-#### Видео выполнения теста в Selenoid:
+#### Видео выполнения теста в Selenoid (Для наглядности был добавлен sleep):
 
 <div style="text-align: left;">
-    <img src="" alt="A video of a test that is being executed on Selenoid.">
+    <img src="resources/videos/video_test_exec.gif" alt="A video of a test that is being executed on Selenoid.">
 </div>
