@@ -95,7 +95,7 @@ pytest tests -s --base-url=$BASE_URL --selenoid-url=$SELENOID_URL --environment=
 
 ## Визуализация.
 
-### Запуск тестов в <a href=""> Jenkins: </a>
+### Запуск тестов в <a href="https://jenkins.qa.guru/job/aslan_rb_python_27_thread_toolshop_diploma_project/"> Jenkins: </a>
 
 <div style="text-align: left;">
     <img src="resources/images/jenkins_run_tests.png" alt="Run a freestyle pipeline in Jenkins.">
