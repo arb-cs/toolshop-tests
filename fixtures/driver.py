@@ -36,7 +36,10 @@ def driver(request, load_env) -> WebDriver:
         if is_headless:
             options.add_argument("--headless=new")
 
+        # RKN blocks ECH in CF, so I had to change the TLS version (otherwise, the website won’t load).
+        options.add_argument("--ssl-version-max=tls1.2")
         options.add_argument(f"--window-size={screen_resolution}")
+
         selenoid_capabilities = {
             "browserName": browser_name,
             "browserVersion": browser_version,
